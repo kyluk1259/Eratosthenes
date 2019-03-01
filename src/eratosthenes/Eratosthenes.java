@@ -18,7 +18,6 @@ public class Eratosthenes {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //rrayList<Integer> prNum = new ArrayList<Integer>();
         int n = 1000;
         boolean[] nums = new boolean[1001];
         int counter = 0;
@@ -30,11 +29,11 @@ public class Eratosthenes {
                 nums[i] = true;
             }
 
-            //check if a number is prime
+            //check if a number is prime or non-prime
             for (int p = 2; p * p <= n; p++) {
 
                 if (nums[p] == true) {
-                    //if a number is not prime, set bool to false
+                    //find every non-prime number, set boolean to false
                     for (int i = p * p; i <= n; i += p) {
                         nums[i] = false;
                     }
